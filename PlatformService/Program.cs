@@ -33,7 +33,8 @@ if (app.Environment.IsDevelopment())
     Console.WriteLine("-->In Memory Server");
     Console.WriteLine($"--> Command Service Endpoint {builder.Configuration["CommandService"]}");
 }
-else{
+else
+{
     Console.WriteLine("-->Using SQL Server DB");
 }
 
@@ -43,5 +44,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//PrepDb.PrepPopulation(app);
+PrepDb.PrepPopulation(app);
 app.Run();
